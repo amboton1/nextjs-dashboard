@@ -71,16 +71,13 @@ export function Card({
 export function BookCard({
    title,
    author,
-   genre,
    isbn
  }: {
     title: string;
-    description: string;
-    genre: string;
+    author: string,
     isbn: string;
 }) {
     const Icon = iconMap['books'];
-    console.log(typeof isbn);
 
     return (
         <div className="rounded-xl bg-gray-50 p-2 shadow-sm">
@@ -95,7 +92,7 @@ export function BookCard({
                 truncate rounded-xl bg-white px-4 py-8 text-center text-2xl`}
             >
                 <Image
-                    src={`https://covers.openlibrary.org/b/isbn/{isbn}.jpg`}
+                    src={`https://covers.openlibrary.org/b/isbn/${isbn}.jpg`}
                     alt="book cover"
                     className="mr-4"
                     width={100}
